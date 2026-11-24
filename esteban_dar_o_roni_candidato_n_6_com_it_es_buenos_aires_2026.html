@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esteban Darío Roni — Candidato N.º 6 | Lista 2 MAIE • Com.It.Es. Buenos Aires 2026</title>
+    <meta name="description" content="Campaña electoral de Esteban Darío Roni, candidato N.º 6 en la Lista 2 — MAIE para el Com.It.Es. de Buenos Aires 2026. Menos distancia, más servicios: descentralización y viceconsulados en Zona Norte. Voto por correo hasta el 4 de diciembre.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        maie: {
+                            navy: '#0B2545',
+                            blue: '#134074',
+                            sky: '#1D63B8',
+                            light: '#EBF4FF',
+                        },
+                        italia: {
+                            green: '#009246',
+                            red: '#CE2B37',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Detalles visuales institucionales y animaciones */
+        .tricolore-bar {
+            background: linear-gradient(90deg, #009246 0%, #009246 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #CE2B37 66.66%, #CE2B37 100%);
+        }
+        .hero-pattern {
+            background-color: #0B2545;
+            background-image: radial-gradient(circle at 85% 20%, rgba(29, 99, 184, 0.35) 0%, transparent 48%),
+                              radial-gradient(circle at 15% 85%, rgba(19, 64, 116, 0.65) 0%, transparent 52%);
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(29, 99, 184, 0.45); }
+            50% { box-shadow: 0 0 0 10px rgba(29, 99, 184, 0); }
+        }
+        .pulse-btn {
+            animation: pulseGlow 2.5s infinite;
+        }
+        .handwriting-input {
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 0.08em;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-maie-sky selection:text-white">
+
+    <!-- Franja Tricolor Superior -->
+    <div class="h-1.5 w-full tricolore-bar fixed top-0 left-0 z-50"></div>
+
+    <!-- 1. HEADER / NAVEGACIÓN FIJA -->
+    <header class="fixed top-1.5 left-0 right-0 bg-white/95 backdrop-blur-md border-b border-slate-200/80 z-40 transition-all">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                <!-- Logo MAIE + Nombre del Candidato -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-maie-sky bg-white shadow-sm shrink-0 group-hover:scale-105 transition-transform">
+                        <img src="Gemini_Generated_Image_u02i9uu02i9uu02i.jpeg" alt="Logo Lista 2 MAIE Buenos Aires" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <span class="block font-extrabold text-maie-navy text-base sm:text-lg leading-tight">Esteban Darío Roni</span>
+                        <span class="block text-xs font-semibold text-maie-sky">Candidato N.º 6 • Lista 2 MAIE</span>
+                    </div>
+                </a>
+
+                <!-- Enlaces Desktop -->
+                <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-600">
+                    <a href="#video-campana" class="hover:text-maie-sky transition-colors">Video</a>
+                    <a href="#propuestas" class="hover:text-maie-sky transition-colors">Propuestas</a>
+                    <a href="#trayectoria" class="hover:text-maie-sky transition-colors">Trayectoria</a>
+                    <a href="#galeria" class="hover:text-maie-sky transition-colors">En Territorio</a>
+                    <a href="#como-votar" class="hover:text-maie-sky transition-colors">Cómo Votar</a>
+                </nav>
+
+                <!-- CTA Header + Botón Menú Móvil -->
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <a href="#como-votar" class="inline-flex items-center gap-2 bg-maie-sky hover:bg-maie-blue text-white text-xs sm:text-sm font-bold px-4 py-2.5 sm:px-5 sm:py-2.5 rounded-full shadow-sm transition-all">
+                        <span>Simular mi Voto</span>
+                        <svg class="w-4 h-4 hidden sm:inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                    <button id="mobile-menu-btn" aria-label="Abrir menú" class="lg:hidden p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-5 space-y-1.5 shadow-lg">
+            <a href="#video-campana" class="mobile-link block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-maie-light hover:text-maie-navy">Video de Campaña</a>
+            <a href="#propuestas" class="mobile-link block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-maie-light hover:text-maie-navy">Propuestas</a>
+            <a href="#trayectoria" class="mobile-link block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-maie-light hover:text-maie-navy">Trayectoria y Perfil</a>
+            <a href="#galeria" class="mobile-link block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-maie-light hover:text-maie-navy">Galería en Territorio</a>
+            <a href="#como-votar" class="mobile-link block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-maie-light hover:text-maie-navy">Cómo Votar (Simulador)</a>
+            <a href="#faq" class="mobile-link block px-3 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-maie-light hover:text-maie-navy">Preguntas Frecuentes</a>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero-pattern text-white pt-28 pb-16 sm:pt-36 sm:pb-24 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                
+                <!-- Columna Izquierda: Mensaje Principal -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2.5 bg-white/10 border border-white/20 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold text-sky-200">
+                        <img src="Gemini_Generated_Image_u02i9uu02i9uu02i.jpeg" alt="MAIE" class="w-5 h-5 rounded-full object-cover bg-white">
+                        <span>Com.It.Es. Buenos Aires 2026 · Lista 2 MAIE · Candidato N.º 6</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12]">
+                        Esteban Darío <span class="text-sky-300">Roni</span>
+                        <span class="block font-serif italic font-semibold text-2xl sm:text-3xl lg:text-4xl text-white/95 mt-3">
+                            “Menos distancia, más servicios para toda la colectividad”
+                        </span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Vecino de <strong>Zona Norte</strong>, ingeniero civil, docente universitario y dirigente de nuestras asociaciones italianas. Trabajamos para descentralizar la atención consular, fortalecer los viceconsulados y defender los derechos de cada ciudadano ítalo-argentino.
+                    </p>
+
+                    <!-- Botones de Acción -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-1">
+                        <a href="#video-campana" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-maie-sky hover:bg-blue-600 text-white font-bold px-7 py-4 rounded-2xl shadow-lg transition-all pulse-btn text-base">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            <span>Ver Video de Campaña</span>
+                        </a>
+                        <a href="#como-votar" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/25 text-white font-semibold px-7 py-4 rounded-2xl transition-all text-base">
+                            <svg class="w-5 h-5 text-sky-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <span>Cómo Marcar la Preferencia #6</span>
+                        </a>
+                    </div>
+
+                    <!-- Aviso Fecha Límite Postal -->
+                    <div class="inline-flex items-center gap-3 bg-amber-500/15 border border-amber-300/30 rounded-2xl px-4 py-3 text-left">
+                        <svg class="w-5 h-5 text-amber-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <p class="text-xs sm:text-sm text-amber-100">
+                            <strong>Voto por correo postal:</strong> El sobre debe llegar al Consulado a más tardar el <span class="underline font-bold text-white">4 de diciembre de 2026</span>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Foto Principal señalando el puesto #6 en la boleta -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white text-slate-800 rounded-3xl p-4 sm:p-5 shadow-2xl border border-white/20 relative overflow-hidden max-w-md mx-auto">
+                        <div class="h-1.5 w-full tricolore-bar absolute top-0 left-0"></div>
+                        
+                        <div class="relative rounded-2xl overflow-hidden bg-slate-100 aspect-[3/4] mt-1">
+                            <img src="20261103_225000.jpg" alt="Esteban Darío Roni señalando el número 6 en la boleta de la Lista 2 MAIE" class="w-full h-full object-cover object-top">
+                            <!-- Badge flotante sobre la foto -->
+                            <div class="absolute bottom-3 left-3 right-3 bg-maie-navy/95 backdrop-blur-md text-white p-3.5 rounded-2xl border border-white/15 shadow-lg flex items-center justify-between gap-3">
+                                <div>
+                                    <span class="block text-[11px] font-bold uppercase tracking-wider text-sky-300">En la boleta oficial</span>
+                                    <span class="font-mono font-extrabold text-sm sm:text-base tracking-wide">6. RONI ESTEBAN DARIO</span>
+                                </div>
+                                <span class="shrink-0 bg-maie-sky text-white text-xs font-extrabold px-3 py-1.5 rounded-xl">
+                                    LISTA 2
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SECCIÓN DE VIDEO DE CAMPAÑA -->
+    <section id="video-campana" class="py-16 sm:py-24 bg-white border-b border-slate-200/70">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                
+                <!-- Reproductor de Video Vertical (5 columnas) -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="w-full max-w-[340px] bg-maie-navy p-3 rounded-[2rem] shadow-2xl border-4 border-slate-100 relative">
+                        <div class="rounded-[1.4rem] overflow-hidden bg-black aspect-[9/16] relative">
+                            <video 
+                                class="w-full h-full object-cover" 
+                                controls 
+                                playsinline 
+                                preload="metadata" 
+                                poster="20261018_184002.jpg">
+                                <source src="video_1.mp4" type="video/mp4">
+                                Tu navegador no soporta la reproducción de video HTML5.
+                            </video>
+                        </div>
+                        <div class="pt-3 pb-1 px-2 flex items-center justify-between text-white text-xs">
+                            <span class="font-bold flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-italia-green"></span>
+                                Mensaje desde Zona Norte
+                            </span>
+                            <span class="text-sky-300 font-semibold">MAIE • Lista 2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mensaje y Resumen del Video (7 columnas) -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-maie-light text-maie-sky px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider">
+                        Mensaje para los Ciudadanos Italianos
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-maie-navy leading-tight">
+                        Descentralizar la atención consular: acercar Italia a cada barrio y localidad
+                    </h2>
+
+                    <blockquote class="border-l-4 border-maie-sky pl-5 py-1 bg-slate-50 rounded-r-2xl pr-4">
+                        <p class="font-serif italic text-lg sm:text-xl text-maie-navy leading-relaxed">
+                            “Soy de Zona Norte, de la circunscripción consular de Buenos Aires y, como a tantos connacionales, el Consulado en Capital nos queda lejos. Queremos viceconsulados que nos resuelvan más trámites, que nos brinden más servicios y que nos eviten desplazamientos innecesarios.”
+                        </p>
+                        <footer class="mt-2 text-sm font-bold text-maie-sky not-italic">
+                            — Esteban Darío Roni, Candidato N.º 6 (Lista 2 MAIE)
+                        </footer>
+                    </blockquote>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+                        <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-4">
+                            <span class="text-xs font-extrabold uppercase tracking-wider text-italia-green">Compromiso #1</span>
+                            <h3 class="font-bold text-maie-navy text-base mt-1">Menos distancia</h3>
+                            <p class="text-sm text-slate-600 mt-1">
+                                Potenciar las oficinas y corresponsalías consulares en Zona Norte y el Conurbano para evitar viajes largos al centro porteño.
+                            </p>
+                        </div>
+                        <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-4">
+                            <span class="text-xs font-extrabold uppercase tracking-wider text-maie-sky">Compromiso #2</span>
+                            <h3 class="font-bold text-maie-navy text-base mt-1">Más servicios</h3>
+                            <p class="text-sm text-slate-600 mt-1">
+                                Ampliar la capacidad operativa de los viceconsulados para resolver trámites cotidianos de forma ágil y cercana.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <a href="#como-votar" class="inline-flex items-center gap-2 text-maie-sky hover:text-maie-navy font-bold text-sm sm:text-base group">
+                            <span>Apoyá esta propuesta marcando la Lista 2 y escribiendo RONI ESTEBAN DARIO</span>
+                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. EJES DE GESTIÓN (4 CARDS) -->
+    <section id="propuestas" class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-14">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-maie-sky">Agenda de Trabajo 2026–2031</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-maie-navy mt-2 mb-4">Ejes de gestión para el Com.It.Es.</h2>
+                <p class="text-base sm:text-lg text-slate-600">
+                    Propuestas concretas, nacidas de escuchar a los vecinos de toda la circunscripción consular de Buenos Aires.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                <!-- Card 1: Descentralización y Viceconsulados -->
+                <div class="bg-white rounded-3xl p-7 sm:p-8 shadow-sm border-2 border-maie-sky/30 flex gap-5 relative overflow-hidden">
+                    <div class="w-12 h-12 rounded-2xl bg-maie-sky text-white flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <div>
+                        <span class="text-xs font-extrabold text-maie-sky uppercase tracking-wider">Prioridad Central • Zona Norte y Conurbano</span>
+                        <h3 class="text-xl font-bold text-maie-navy mt-0.5 mb-2">Descentralización y Viceconsulados</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Fortalecer los viceconsulados y agencias consulares de Zona Norte y del Gran Buenos Aires para que resuelvan más trámites cerca de tu casa, evitando desplazamientos innecesarios hasta Capital Federal.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Modernización y Turnos Consulares -->
+                <div class="bg-white rounded-3xl p-7 sm:p-8 shadow-sm border border-slate-200/80 flex gap-5">
+                    <div class="w-12 h-12 rounded-2xl bg-maie-navy text-white flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-maie-navy uppercase tracking-wider">Eje 02 • Servicios al Ciudadano</span>
+                        <h3 class="text-xl font-bold text-maie-navy mt-0.5 mb-2">Modernización y Turnos Consulares</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Gestión permanente ante el Consulado General y los parlamentarios del MAIE en Roma para agilizar turnos de pasaporte, actualización del registro AIRE, reconstrucción de ciudadanía y atención a adultos mayores.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Fortalecimiento de las Asociaciones Regionales -->
+                <div class="bg-white rounded-3xl p-7 sm:p-8 shadow-sm border border-slate-200/80 flex gap-5">
+                    <div class="w-12 h-12 rounded-2xl bg-italia-green text-white flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-italia-green uppercase tracking-wider">Eje 03 • Identidad y Comunidad</span>
+                        <h3 class="text-xl font-bold text-maie-navy mt-0.5 mb-2">Fortalecimiento de las Asociaciones Regionales</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Vínculo activo y acompañamiento técnico para nuestros círculos regionales y federaciones (como el <em>Circolo Vicentini</em> y <em>FEDITALIA</em>), facilitando la presentación de proyectos culturales ante Italia.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Cultura, Lengua y Nuevas Generaciones -->
+                <div class="bg-white rounded-3xl p-7 sm:p-8 shadow-sm border border-slate-200/80 flex gap-5">
+                    <div class="w-12 h-12 rounded-2xl bg-italia-red text-white flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-italia-red uppercase tracking-wider">Eje 04 • Futuro Ítalo-Argentino</span>
+                        <h3 class="text-xl font-bold text-maie-navy mt-0.5 mb-2">Cultura, Lengua y Nuevas Generaciones</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            Difusión de becas de estudio en Italia, promoción de cursos de lengua y cultura italiana, redes profesionales bilaterales y programas de turismo de raíces para jóvenes descendientes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. TRAYECTORIA Y PERFIL -->
+    <section id="trayectoria" class="py-16 sm:py-24 bg-white border-t border-slate-200/70">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-14">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-maie-sky">Formación y Vocación Comunitaria</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-maie-navy mt-2 mb-4">Trayectoria y Perfil</h2>
+                <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+                    Soy <strong>Esteban Darío Roni</strong>, vecino de Zona Norte de la circunscripción consular de Buenos Aires. Combino una sólida carrera profesional y académica con décadas de participación genuina en las instituciones de la colectividad italiana.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Perfil 1 -->
+                <div class="bg-slate-50 rounded-3xl p-7 border border-slate-200/80">
+                    <div class="w-12 h-12 rounded-2xl bg-maie-sky/10 text-maie-sky flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-maie-navy mb-2">Ingeniero Civil y Ejecutivo</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Graduado como Ingeniero Civil, con trayectoria ejecutiva en desarrollo de proveedores industriales y gestión de procesos complejos, aportando capacidad organizativa y rigor técnico al Com.It.Es.
+                    </p>
+                </div>
+
+                <!-- Perfil 2 -->
+                <div class="bg-slate-50 rounded-3xl p-7 border border-slate-200/80">
+                    <div class="w-12 h-12 rounded-2xl bg-italia-green/10 text-italia-green flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-maie-navy mb-2">Docente Universitario (ITBA)</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Profesor universitario en el Instituto Tecnológico de Buenos Aires (ITBA), comprometido con la formación de jóvenes profesionales y la cooperación académica entre Argentina e Italia.
+                    </p>
+                </div>
+
+                <!-- Perfil 3 -->
+                <div class="bg-slate-50 rounded-3xl p-7 border border-slate-200/80">
+                    <div class="w-12 h-12 rounded-2xl bg-italia-red/10 text-italia-red flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-maie-navy mb-2">Dirigente Asociativo (MAIE)</h3>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Integrante de la Comisión Directiva del <em>Circolo Vicentini di Buenos Aires</em>, participante activo en <em>FEDITALIA</em> y candidato de la <strong>Lista 2 — MAIE</strong> (Movimento Associativo Italiani all'Estero).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. GALERÍA EN TERRITORIO ("RECORRIENDO LA CIRCUNSCRIPCIÓN") -->
+    <section id="galeria" class="py-16 sm:py-24 bg-slate-50 border-t border-slate-200/70">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-maie-sky">En Territorio y con la Colectividad</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-maie-navy mt-2 mb-4">Recorriendo la Circunscripción</h2>
+                <p class="text-base sm:text-lg text-slate-600">
+                    Presencia permanente en asociaciones regionales, encuentros comunitarios y puntos informativos en Zona Norte y toda la circunscripción de Buenos Aires. Hacé clic en cualquier foto para ampliarla.
+                </p>
+            </div>
+
+            <!-- Grid Responsivo de 6 Fotos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Foto 1 -->
+                <figure class="gallery-item group bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200/80 hover:shadow-xl transition-all cursor-pointer flex flex-col" data-src="20261018_184002.jpg" data-caption="Punto informativo 'Voto Italiano - Fortaleciendo la Ciudadanía Italiana' en Zona Norte junto a militantes y vecinos.">
+                    <div class="aspect-[4/3] overflow-hidden bg-slate-200 relative">
+                        <img src="20261018_184002.jpg" alt="Punto informativo Voto Italiano en Zona Norte" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-maie-navy/85 backdrop-blur-xs text-white text-[11px] font-bold px-3 py-1 rounded-full">Zona Norte</span>
+                    </div>
+                    <figcaption class="p-5 text-sm text-slate-700 font-medium leading-relaxed flex-1">
+                        Punto informativo <strong>"Voto Italiano - Fortaleciendo la Ciudadanía Italiana"</strong> en Zona Norte junto a militantes y vecinos.
+                    </figcaption>
+                </figure>
+
+                <!-- Foto 2 -->
+                <figure class="gallery-item group bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200/80 hover:shadow-xl transition-all cursor-pointer flex flex-col" data-src="20260925_184123.jpg" data-caption="Encuentro partidario del MAIE con dirigentes de la lista.">
+                    <div class="aspect-[4/3] overflow-hidden bg-slate-200 relative">
+                        <img src="20260925_184123.jpg" alt="Encuentro partidario del MAIE con dirigentes de la lista" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-maie-sky/90 backdrop-blur-xs text-white text-[11px] font-bold px-3 py-1 rounded-full">Equipo Lista 2</span>
+                    </div>
+                    <figcaption class="p-5 text-sm text-slate-700 font-medium leading-relaxed flex-1">
+                        Encuentro partidario del <strong>MAIE</strong> con dirigentes de la lista de Buenos Aires.
+                    </figcaption>
+                </figure>
+
+                <!-- Foto 3 -->
+                <figure class="gallery-item group bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200/80 hover:shadow-xl transition-all cursor-pointer flex flex-col" data-src="20260913_181927.jpg" data-caption="Actividad institucional frente al banner del Com.It.Es. Circunscripción Consular Buenos Aires.">
+                    <div class="aspect-[4/3] overflow-hidden bg-slate-200 relative">
+                        <img src="20260913_181927.jpg" alt="Actividad institucional frente al banner del Com.It.Es. Buenos Aires" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-italia-green/90 backdrop-blur-xs text-white text-[11px] font-bold px-3 py-1 rounded-full">Com.It.Es. Bs. As.</span>
+                    </div>
+                    <figcaption class="p-5 text-sm text-slate-700 font-medium leading-relaxed flex-1">
+                        Actividad institucional frente al banner del <strong>Com.It.Es. Circunscripción Consular Buenos Aires</strong>.
+                    </figcaption>
+                </figure>
+
+                <!-- Foto 4 -->
+                <figure class="gallery-item group bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200/80 hover:shadow-xl transition-all cursor-pointer flex flex-col" data-src="20260920_162547.jpg" data-caption="Almuerzo comunitario en asociación italiana regional junto a dirigentes y familias de la colectividad.">
+                    <div class="aspect-[4/3] overflow-hidden bg-slate-200 relative">
+                        <img src="20260920_162547.jpg" alt="Almuerzo comunitario en asociación italiana regional" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-maie-navy/85 backdrop-blur-xs text-white text-[11px] font-bold px-3 py-1 rounded-full">Asociaciones</span>
+                    </div>
+                    <figcaption class="p-5 text-sm text-slate-700 font-medium leading-relaxed flex-1">
+                        Almuerzo comunitario en <strong>asociación italiana regional</strong> junto a dirigentes y familias de la colectividad.
+                    </figcaption>
+                </figure>
+
+                <!-- Foto 5 -->
+                <figure class="gallery-item group bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200/80 hover:shadow-xl transition-all cursor-pointer flex flex-col" data-src="20261103_224701.jpg" data-caption="Reunión de trabajo y articulación con referentes de asociaciones italianas.">
+                    <div class="aspect-[4/3] overflow-hidden bg-slate-200 relative">
+                        <img src="20261103_224701.jpg" alt="Reunión de trabajo y articulación con referentes de asociaciones italianas" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-maie-sky/90 backdrop-blur-xs text-white text-[11px] font-bold px-3 py-1 rounded-full">Articulación</span>
+                    </div>
+                    <figcaption class="p-5 text-sm text-slate-700 font-medium leading-relaxed flex-1">
+                        Reunión de trabajo y articulación con <strong>referentes de asociaciones italianas</strong>.
+                    </figcaption>
+                </figure>
+
+                <!-- Foto 6 -->
+                <figure class="gallery-item group bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200/80 hover:shadow-xl transition-all cursor-pointer flex flex-col" data-src="IMG-20261101-WA0025.jpg" data-caption="Encuentro deportivo y social con dirigentes de la colectividad italiana.">
+                    <div class="aspect-[4/3] overflow-hidden bg-slate-200 relative">
+                        <img src="IMG-20261101-WA0025.jpg" alt="Encuentro deportivo y social con dirigentes de la colectividad italiana" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-italia-red/90 backdrop-blur-xs text-white text-[11px] font-bold px-3 py-1 rounded-full">Colectividad</span>
+                    </div>
+                    <figcaption class="p-5 text-sm text-slate-700 font-medium leading-relaxed flex-1">
+                        Encuentro deportivo y social con <strong>dirigentes de la colectividad italiana</strong>.
+                    </figcaption>
+                </figure>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SIMULADOR INTERACTIVO DE BOLETA OFICIAL Y ENVÍO POSTAL -->
+    <section id="como-votar" class="py-16 sm:py-24 bg-white border-t border-slate-200/70">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-maie-sky">Guía Práctica Electoral</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-maie-navy mt-2 mb-4">Cómo Votar por Correo hasta el 4 de Diciembre</h2>
+                <p class="text-base sm:text-lg text-slate-600">
+                    Practicá en este simulador cómo marcar la <strong>Lista 2 — MAIE</strong> y escribir tu preferencia para <strong>Esteban Darío Roni (N.º 6)</strong>. Podés sumar hasta 6 preferencias en total dentro de la misma lista.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+                
+                <!-- Simulador Interactivo de la Boleta Oficial (7 columnas) -->
+                <div class="lg:col-span-7 bg-slate-100 rounded-3xl p-5 sm:p-8 border border-slate-200 shadow-inner">
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                        <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-maie-navy bg-white px-3 py-1 rounded-full border border-slate-200">
+                            <span class="w-2 h-2 rounded-full bg-maie-sky animate-ping"></span>
+                            Simulador Oficial Boleta Lista 2
+                        </span>
+                        <button id="reset-ballot-btn" type="button" class="text-xs font-semibold text-slate-500 hover:text-maie-navy underline cursor-pointer">
+                            Limpiar boleta
+                        </button>
+                    </div>
+
+                    <!-- Papel de Boleta Simulada -->
+                    <div class="bg-[#FAF9F5] border-2 border-slate-300 rounded-2xl p-4 sm:p-6 shadow-md">
+                        <div class="text-center border-b border-slate-300 pb-3 mb-4">
+                            <p class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Elezione del Com.It.Es. • Circoscrizione Consolare di Buenos Aires</p>
+                            <p class="text-xs text-slate-600 mt-0.5">Hacé clic sobre el logo de la <strong>Lista 2 — MAIE</strong> para marcarlo con una <strong>X</strong></p>
+                        </div>
+
+                        <!-- Fila Lista 1 (Referencia) -->
+                        <div class="flex items-center justify-between p-2.5 rounded-xl border border-slate-200 bg-white/60 opacity-60 mb-3">
+                            <div class="flex items-center gap-2.5">
+                                <span class="px-2 py-0.5 text-[11px] font-bold bg-slate-200 text-slate-600 rounded">Lista 1</span>
+                                <span class="text-xs sm:text-sm font-semibold text-slate-600">UNITI — Uniti Italia + Argentina</span>
+                            </div>
+                            <span class="text-[11px] text-slate-400">6 líneas</span>
+                        </div>
+
+                        <!-- Fila Lista 2 — MAIE (Interactiva con Logo Oficial) -->
+                        <div id="maie-row" class="rounded-2xl border-2 border-maie-sky bg-white p-4 shadow-sm transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200">
+                                <div class="flex items-center gap-3.5">
+                                    <!-- Logo Oficial MAIE Clickeable con Cruz X superpuesta -->
+                                    <button id="toggle-x-btn" type="button" aria-label="Marcar logo Lista 2 MAIE con una X" class="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-maie-navy bg-white overflow-hidden flex items-center justify-center transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-maie-sky shrink-0 shadow-xs group">
+                                        <img src="Gemini_Generated_Image_u02i9uu02i9uu02i.jpeg" alt="Símbolo Lista 2 MAIE" class="w-full h-full object-cover">
+                                        <!-- Cruz X dibujada encima al marcar -->
+                                        <span id="ballot-x-mark" class="absolute inset-0 flex items-center justify-center bg-white/25 text-5xl sm:text-6xl font-black text-slate-900 select-none drop-shadow-xs">✕</span>
+                                    </button>
+                                    <div>
+                                        <div class="flex items-center gap-2">
+                                            <span class="px-2.5 py-0.5 text-xs font-extrabold bg-maie-navy text-white rounded-md">LISTA 2</span>
+                                            <span class="font-extrabold text-maie-navy text-lg">MAIE</span>
+                                        </div>
+                                        <p class="text-xs text-slate-600 font-medium mt-0.5">Movimento Associativo Italiani all'Estero con Merlo</p>
+                                    </div>
+                                </div>
+
+                                <!-- Botones Rápidos de Autocompletado -->
+                                <div class="flex flex-wrap sm:flex-col gap-2 shrink-0">
+                                    <button id="autofill-roni-btn" type="button" class="inline-flex items-center justify-center gap-1.5 bg-maie-sky hover:bg-maie-blue text-white text-xs font-bold px-3.5 py-2 rounded-xl transition-colors cursor-pointer">
+                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                                        <span>Marcar #6 Roni</span>
+                                    </button>
+                                    <button id="autofill-all-btn" type="button" class="inline-flex items-center justify-center gap-1.5 bg-maie-light hover:bg-sky-200/70 text-maie-navy text-xs font-bold px-3.5 py-2 rounded-xl transition-colors cursor-pointer">
+                                        <span>Completar 6 del MAIE</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 6 Líneas de Preferencia de Buenos Aires -->
+                            <div class="mt-4">
+                                <div class="flex items-center justify-between mb-2.5">
+                                    <span class="text-xs font-bold text-slate-700">Preferencias (hasta 6 candidatos de la Lista 2):</span>
+                                    <span class="text-[11px] font-semibold text-maie-sky">Circunscripción Buenos Aires</span>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-xs font-bold text-slate-400 w-4">1.</span>
+                                        <input id="pref-1" type="text" value="RONI ESTEBAN DARIO" aria-label="Preferencia 1" class="pref-input w-full handwriting-input text-xs sm:text-sm font-bold text-maie-navy bg-maie-light/50 border-b-2 border-maie-sky px-2 py-1.5 rounded-t focus:outline-none uppercase">
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-xs font-bold text-slate-400 w-4">2.</span>
+                                        <input id="pref-2" type="text" placeholder="Opcional (ej. SERENI JORGE AQUILES)" aria-label="Preferencia 2" class="pref-input w-full handwriting-input text-xs sm:text-sm text-slate-700 bg-slate-50 border-b border-slate-300 px-2 py-1.5 rounded-t focus:outline-none focus:border-maie-sky uppercase">
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-xs font-bold text-slate-400 w-4">3.</span>
+                                        <input id="pref-3" type="text" placeholder="Opcional (ej. VALOPPI SILVINA LARA)" aria-label="Preferencia 3" class="pref-input w-full handwriting-input text-xs sm:text-sm text-slate-700 bg-slate-50 border-b border-slate-300 px-2 py-1.5 rounded-t focus:outline-none focus:border-maie-sky uppercase">
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-xs font-bold text-slate-400 w-4">4.</span>
+                                        <input id="pref-4" type="text" placeholder="Opcional (ej. PITTON STRAFACE MARIEL)" aria-label="Preferencia 4" class="pref-input w-full handwriting-input text-xs sm:text-sm text-slate-700 bg-slate-50 border-b border-slate-300 px-2 py-1.5 rounded-t focus:outline-none focus:border-maie-sky uppercase">
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-xs font-bold text-slate-400 w-4">5.</span>
+                                        <input id="pref-5" type="text" placeholder="Opcional (ej. GROPPA ANTONIO)" aria-label="Preferencia 5" class="pref-input w-full handwriting-input text-xs sm:text-sm text-slate-700 bg-slate-50 border-b border-slate-300 px-2 py-1.5 rounded-t focus:outline-none focus:border-maie-sky uppercase">
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-xs font-bold text-slate-400 w-4">6.</span>
+                                        <input id="pref-6" type="text" placeholder="Opcional (ej. CAEIRO DANIEL OMAR)" aria-label="Preferencia 6" class="pref-input w-full handwriting-input text-xs sm:text-sm text-slate-700 bg-slate-50 border-b border-slate-300 px-2 py-1.5 rounded-t focus:outline-none focus:border-maie-sky uppercase">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Filas Listas 3 y 4 (Referencia compacta) -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-3 opacity-60">
+                            <div class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200 bg-white/60">
+                                <span class="px-2 py-0.5 text-[11px] font-bold bg-slate-200 text-slate-600 rounded">Lista 3</span>
+                                <span class="text-xs font-semibold text-slate-600">USEI</span>
+                            </div>
+                            <div class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200 bg-white/60">
+                                <span class="px-2 py-0.5 text-[11px] font-bold bg-slate-200 text-slate-600 rounded">Lista 4</span>
+                                <span class="text-xs font-semibold text-slate-600">Integrazione</span>
+                            </div>
+                        </div>
+
+                        <!-- Estado dinámico de validez -->
+                        <div id="ballot-status" class="mt-4 p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs sm:text-sm flex items-center gap-2.5">
+                            <svg class="w-5 h-5 text-italia-green shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <span><strong>¡Boleta válida!</strong> Marcaste la Lista 2 (MAIE) y sumaste tu preferencia para <strong>RONI ESTEBAN DARIO</strong>.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paso a Paso del Armado y Envío del Sobre (5 columnas) -->
+                <div class="lg:col-span-5 space-y-4">
+                    <h3 class="text-xl font-extrabold text-maie-navy">Instrucciones para el envío postal</h3>
+
+                    <!-- Paso 1 -->
+                    <div class="flex gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-200/80">
+                        <div class="w-9 h-9 rounded-xl bg-maie-navy text-white font-extrabold flex items-center justify-center shrink-0">1</div>
+                        <div>
+                            <h4 class="font-bold text-maie-navy text-base">Marcá la Lista 2 y tu preferencia</h4>
+                            <p class="text-sm text-slate-600 mt-1">
+                                Con lapicera azul o negra, hacé una <strong>X</strong> sobre el logo de la <strong>Lista 2 (MAIE)</strong> y escribí <strong>RONI ESTEBAN DARIO</strong> (podés sumar hasta 5 nombres más de la misma lista).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Paso 2 -->
+                    <div class="flex gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-200/80">
+                        <div class="w-9 h-9 rounded-xl bg-maie-navy text-white font-extrabold flex items-center justify-center shrink-0">2</div>
+                        <div>
+                            <h4 class="font-bold text-maie-navy text-base">Guardá la boleta en el sobre blanco chico</h4>
+                            <p class="text-sm text-slate-600 mt-1">
+                                Doblá la boleta, introducila únicamente en el <strong>sobre blanco pequeño</strong> (sin escribir nada por fuera) y cerralo bien.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Paso 3 -->
+                    <div class="flex gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-200/80">
+                        <div class="w-9 h-9 rounded-xl bg-maie-navy text-white font-extrabold flex items-center justify-center shrink-0">3</div>
+                        <div>
+                            <h4 class="font-bold text-maie-navy text-base">Colocalo en el sobre grande prepago</h4>
+                            <p class="text-sm text-slate-600 mt-1">
+                                Dentro del sobre grande dirigido al Consulado General, poné el <strong>sobre blanco chico cerrado</strong> junto con el <strong>talón electoral</strong> que vino en tu paquete.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Paso 4 -->
+                    <div class="flex gap-4 bg-maie-light/80 p-4 rounded-2xl border border-maie-sky/30">
+                        <div class="w-9 h-9 rounded-xl bg-maie-sky text-white font-extrabold flex items-center justify-center shrink-0">4</div>
+                        <div>
+                            <h4 class="font-bold text-maie-navy text-base">Despachalo gratis en el correo</h4>
+                            <p class="text-sm text-slate-700 mt-1">
+                                El franqueo es pago (gratuito). Envialo cuanto antes para que llegue al Consulado antes del cierre: <strong>4 de diciembre de 2026</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. PREGUNTAS FRECUENTES (ACORDEÓN INTERACTIVO) -->
+    <section id="faq" class="py-16 sm:py-24 bg-slate-50 border-t border-slate-200/70">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-maie-sky">Dudas habituales</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-maie-navy mt-2">Preguntas Frecuentes</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs">
+                    <button type="button" class="faq-btn w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left font-bold text-maie-navy text-base sm:text-lg hover:bg-slate-50/80 transition-colors cursor-pointer" aria-expanded="true">
+                        <span>¿Qué es el Com.It.Es. y cuál es su función?</span>
+                        <svg class="faq-icon w-5 h-5 text-maie-sky shrink-0 transition-transform duration-200 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content px-5 sm:px-6 pb-5 sm:pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-3">
+                        El <strong>Comitato degli Italiani all'Estero (Com.It.Es.)</strong> es el órgano representativo de los ciudadanos italianos residentes en el exterior, elegido por voto directo cada 5 años. Sus integrantes trabajan <em>ad honorem</em> junto al Consulado General para mejorar los servicios consulares, impulsar la descentralización en viceconsulados, apoyar a las asociaciones italianas y promover actividades culturales, sociales y educativas.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs">
+                    <button type="button" class="faq-btn w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left font-bold text-maie-navy text-base sm:text-lg hover:bg-slate-50/80 transition-colors cursor-pointer" aria-expanded="false">
+                        <span>¿Cuántas preferencias puedo escribir en Buenos Aires?</span>
+                        <svg class="faq-icon w-5 h-5 text-maie-sky shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content hidden px-5 sm:px-6 pb-5 sm:pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-3">
+                        En la circunscripción consular de Buenos Aires (al superar los 100.000 inscriptos en el AIRE), el Comité cuenta con 18 miembros y podés escribir <strong>hasta 6 votos de preferencia</strong>. Recordá que todos los candidatos que escribas deben pertenecer a la <strong>Lista 2 — MAIE</strong> (la misma lista marcada con la X).
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs">
+                    <button type="button" class="faq-btn w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left font-bold text-maie-navy text-base sm:text-lg hover:bg-slate-50/80 transition-colors cursor-pointer" aria-expanded="false">
+                        <span>¿Cómo ingresa un candidato que ocupa el puesto N.º 6 en la lista?</span>
+                        <svg class="faq-icon w-5 h-5 text-maie-sky shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content hidden px-5 sm:px-6 pb-5 sm:pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-3">
+                        En el Com.It.Es. las bancas dentro de cada lista no se asignan por el orden numérico del manifiesto, sino por la <strong>cantidad de votos individuales de preferencia</strong> que recibe cada candidato. Por eso, escribir <code>RONI ESTEBAN DARIO</code> en tu boleta es la forma directa de asegurar su ingreso al Comité.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs">
+                    <button type="button" class="faq-btn w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left font-bold text-maie-navy text-base sm:text-lg hover:bg-slate-50/80 transition-colors cursor-pointer" aria-expanded="false">
+                        <span>¿Cuál es la fecha límite para que llegue mi voto al Consulado?</span>
+                        <svg class="faq-icon w-5 h-5 text-maie-sky shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="faq-content hidden px-5 sm:px-6 pb-5 sm:pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-3">
+                        Tu sobre debe llegar físicamente al Consulado General de Italia en Buenos Aires <strong>a más tardar el 4 de diciembre de 2026</strong>. Te recomendamos enviarlo por correo con varios días de anticipación para evitar demoras postales.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FOOTER INSTITUCIONAL Y COMPARTIR -->
+    <footer class="bg-maie-navy text-white pt-14 pb-10 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-maie-blue/70 border border-white/15 rounded-3xl p-6 sm:p-10 mb-10 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+                    <img src="Gemini_Generated_Image_u02i9uu02i9uu02i.jpeg" alt="MAIE Lista 2" class="w-16 h-16 rounded-full border-2 border-white/30 bg-white object-cover shrink-0">
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-white">Compartí esta propuesta con tu familia y vecinos</h3>
+                        <p class="text-sky-200 text-sm sm:text-base mt-1">
+                            Sumá tu apoyo a <strong>Esteban Darío Roni (Candidato N.º 6 • Lista 2 MAIE)</strong> antes del 4 de diciembre.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center justify-center gap-3 shrink-0">
+                    <button id="share-whatsapp-btn" type="button" class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-slate-950 font-bold px-5 py-3 rounded-2xl shadow-md transition-all cursor-pointer">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+                        <span>Compartir en WhatsApp</span>
+                    </button>
+                    <button id="copy-link-btn" type="button" class="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/25 text-white font-semibold px-5 py-3 rounded-2xl transition-all cursor-pointer">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                        <span>Copiar enlace</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-300 border-t border-white/10 pt-6">
+                <div class="flex items-center gap-2.5">
+                    <span class="inline-block w-3 h-3 rounded-full bg-maie-sky"></span>
+                    <span class="font-bold text-white">Esteban Darío Roni</span>
+                    <span>•</span>
+                    <span>Candidato N.º 6 — Lista 2 MAIE</span>
+                </div>
+                <p class="text-center sm:text-right text-slate-400">
+                    Elecciones Com.It.Es. Buenos Aires 2026 • Menos distancia, más servicios • Cierre postal: 4 de diciembre.
+                </p>
+            </div>
+        </div>
+        <!-- Franja Tricolor Inferior -->
+        <div class="h-1.5 w-full tricolore-bar absolute bottom-0 left-0"></div>
+    </footer>
+
+    <!-- Lightbox Modal para la Galería de Fotos -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-sm flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Visor de fotografía">
+        <div class="relative max-w-4xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl">
+            <button id="close-lightbox-btn" type="button" aria-label="Cerrar visor" class="absolute top-3 right-3 z-10 w-10 h-10 rounded-full bg-maie-navy/85 hover:bg-maie-navy text-white flex items-center justify-center transition-colors cursor-pointer">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            <div class="bg-slate-900 flex items-center justify-center max-h-[75vh] overflow-hidden">
+                <img id="lightbox-img" src="" alt="" class="max-h-[75vh] w-auto object-contain">
+            </div>
+            <div class="p-4 sm:p-5 bg-white border-t border-slate-100">
+                <p id="lightbox-caption" class="text-sm sm:text-base font-semibold text-maie-navy"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notificación Toast Flotante -->
+    <div id="toast-notification" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-maie-navy text-white px-5 py-3.5 rounded-2xl shadow-xl border border-maie-sky/50 flex items-center gap-3 text-sm font-semibold">
+            <svg class="w-5 h-5 text-italia-green shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span id="toast-message">Enlace copiado al portapapeles</span>
+        </div>
+    </div>
+
+    <!-- JavaScript de Interactividad -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Menú móvil desplegable
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // 2. Lightbox Modal para la Galería de Fotos
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const lightboxModal = document.getElementById('lightbox-modal');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const closeLightboxBtn = document.getElementById('close-lightbox-btn');
+
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const src = item.getAttribute('data-src');
+                    const caption = item.getAttribute('data-caption');
+                    lightboxImg.src = src;
+                    lightboxImg.alt = caption;
+                    lightboxCaption.textContent = caption;
+                    lightboxModal.classList.remove('hidden');
+                });
+            });
+
+            function closeLightbox() {
+                lightboxModal.classList.add('hidden');
+                lightboxImg.src = '';
+            }
+
+            closeLightboxBtn.addEventListener('click', closeLightbox);
+            lightboxModal.addEventListener('click', (e) => {
+                if (e.target === lightboxModal) closeLightbox();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !lightboxModal.classList.contains('hidden')) {
+                    closeLightbox();
+                }
+            });
+
+            // 3. Simulador Interactivo de Boleta Electoral
+            const toggleXBtn = document.getElementById('toggle-x-btn');
+            const ballotXMark = document.getElementById('ballot-x-mark');
+            const maieRow = document.getElementById('maie-row');
+            const prefInputs = document.querySelectorAll('.pref-input');
+            const autofillRoniBtn = document.getElementById('autofill-roni-btn');
+            const autofillAllBtn = document.getElementById('autofill-all-btn');
+            const resetBallotBtn = document.getElementById('reset-ballot-btn');
+            const ballotStatus = document.getElementById('ballot-status');
+
+            let isXMarked = true;
+
+            function updateBallotStatus() {
+                const values = Array.from(prefInputs).map(inp => inp.value.trim().toUpperCase()).filter(Boolean);
+                const hasRoni = values.some(val => val.includes('RONI'));
+
+                if (isXMarked && hasRoni) {
+                    ballotStatus.className = 'mt-4 p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs sm:text-sm flex items-center gap-2.5';
+                    ballotStatus.innerHTML = `
+                        <svg class="w-5 h-5 text-italia-green shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <span><strong>¡Boleta válida!</strong> Marcaste la Lista 2 (MAIE) con ${values.length} preferencia(s), incluyendo a <strong>RONI ESTEBAN DARIO</strong>.</span>
+                    `;
+                } else if (isXMarked) {
+                    ballotStatus.className = 'mt-4 p-3.5 rounded-xl bg-sky-50 border border-sky-200 text-maie-navy text-xs sm:text-sm flex items-center gap-2.5';
+                    ballotStatus.innerHTML = `
+                        <svg class="w-5 h-5 text-maie-sky shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <span>Lista 2 (MAIE) marcada. Escribí <strong>RONI ESTEBAN DARIO</strong> en una de las líneas para sumarle tu voto de preferencia.</span>
+                    `;
+                } else {
+                    ballotStatus.className = 'mt-4 p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs sm:text-sm flex items-center gap-2.5';
+                    ballotStatus.innerHTML = `
+                        <svg class="w-5 h-5 text-amber-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                        <span>¡Atención! Hacé clic sobre el logo de <strong>LISTA 2 MAIE</strong> para marcarlo con una <strong>X</strong>.</span>
+                    `;
+                }
+            }
+
+            function markX() {
+                isXMarked = true;
+                ballotXMark.classList.remove('hidden');
+                maieRow.classList.remove('border-slate-300');
+                maieRow.classList.add('border-maie-sky');
+            }
+
+            toggleXBtn.addEventListener('click', () => {
+                isXMarked = !isXMarked;
+                if (isXMarked) {
+                    markX();
+                } else {
+                    ballotXMark.classList.add('hidden');
+                    maieRow.classList.remove('border-maie-sky');
+                    maieRow.classList.add('border-slate-300');
+                }
+                updateBallotStatus();
+            });
+
+            autofillRoniBtn.addEventListener('click', () => {
+                markX();
+                document.getElementById('pref-1').value = 'RONI ESTEBAN DARIO';
+                updateBallotStatus();
+            });
+
+            autofillAllBtn.addEventListener('click', () => {
+                markX();
+                const recommended = [
+                    'RONI ESTEBAN DARIO',
+                    'SERENI JORGE AQUILES',
+                    'VALOPPI SILVINA LARA',
+                    'PITTON STRAFACE MARIEL ANGELES',
+                    'GROPPA ANTONIO',
+                    'CAEIRO DANIEL OMAR'
+                ];
+                prefInputs.forEach((inp, idx) => {
+                    inp.value = recommended[idx] || '';
+                });
+                updateBallotStatus();
+            });
+
+            resetBallotBtn.addEventListener('click', () => {
+                isXMarked = false;
+                ballotXMark.classList.add('hidden');
+                maieRow.classList.remove('border-maie-sky');
+                maieRow.classList.add('border-slate-300');
+                prefInputs.forEach(inp => inp.value = '');
+                updateBallotStatus();
+            });
+
+            prefInputs.forEach(inp => inp.addEventListener('input', updateBallotStatus));
+
+            // 4. Acordeón de Preguntas Frecuentes (FAQ)
+            const faqBtns = document.querySelectorAll('.faq-btn');
+            faqBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const content = btn.nextElementSibling;
+                    const icon = btn.querySelector('.faq-icon');
+                    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+
+                    btn.setAttribute('aria-expanded', !isExpanded);
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+
+            // 5. Compartir por WhatsApp y Copiar Enlace (con Toast)
+            const toast = document.getElementById('toast-notification');
+            const toastMsg = document.getElementById('toast-message');
+            let toastTimeout;
+
+            function showToast(message) {
+                toastMsg.textContent = message;
+                toast.classList.remove('translate-y-20', 'opacity-0');
+                clearTimeout(toastTimeout);
+                toastTimeout = setTimeout(() => {
+                    toast.classList.add('translate-y-20', 'opacity-0');
+                }, 3000);
+            }
+
+            const shareWhatsappBtn = document.getElementById('share-whatsapp-btn');
+            shareWhatsappBtn.addEventListener('click', () => {
+                const shareText = encodeURIComponent(
+                    'Menos distancia, más servicios: en las elecciones del Com.It.Es. Buenos Aires 2026 (cierre postal 4 de diciembre), apoyemos a Esteban Darío Roni — Candidato N.º 6 en la Lista 2 (MAIE). Marcá Lista 2 con una X y escribí: RONI ESTEBAN DARIO.'
+                );
+                window.open(`https://wa.me/?text=${shareText}`, '_blank', 'noopener,noreferrer');
+            });
+
+            const copyLinkBtn = document.getElementById('copy-link-btn');
+            copyLinkBtn.addEventListener('click', () => {
+                const dummyInput = document.createElement('input');
+                dummyInput.value = window.location.href;
+                document.body.appendChild(dummyInput);
+                dummyInput.select();
+                try {
+                    document.execCommand('copy');
+                    showToast('¡Enlace de campaña copiado para compartir!');
+                } catch (err) {
+                    showToast('No se pudo copiar el enlace automáticamente.');
+                }
+                document.body.removeChild(dummyInput);
+            });
+        });
+    </script>
+</body>
+</html>
